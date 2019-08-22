@@ -4,6 +4,14 @@
 
 In the project directory, you can run:
 
+`bundle exec rails db:migrate`
+
+Creates our sqlite3 database for us
+
+`bundle exec rails db:seed`
+
+Adds predefined questions into the database
+
 `bundle exec rails s`
 
 Runs the app in the development mode.
