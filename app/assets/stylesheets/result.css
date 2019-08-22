@@ -1,0 +1,78 @@
+.result-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    height: 200px;
+}
+.perspective-text{
+    margin-left: 10px;
+}
+.yours{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.text-two {
+    font-size: 18px;
+}
+.perspective-chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 140px;
+}
+
+.perspective-chart-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.perspective-chart-row > div:nth-child(1){
+    width: 125px;
+    font-weight: 300;
+    color: #878787;
+}
+.perspective-chart-row > div:nth-child(2){
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.perspective-chart-row > div:nth-child(3){
+    width: 125px;
+    font-weight: 300;
+    color: #878787;
+}
+
+.graph-div{
+    min-width: 200px;
+    width: 200px;
+    height: 14px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.graph-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.graph-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.colored {
+    min-width: 50%;
+    background-color: #a922c8;
+}
