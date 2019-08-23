@@ -76,3 +76,11 @@
     min-width: 50%;
     background-color: #a922c8;
 }
+
+@media (max-width:900px) {
+    .result-container{
+        flex-direction: column;
+        height: 250px;
+        min-width: 500px;
+    }
+}
