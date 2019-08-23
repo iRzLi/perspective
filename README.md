@@ -1,6 +1,6 @@
 # Perspective
 
-## Available Scripts
+## Commands to run
 
 In the project directory, you can run:
 
