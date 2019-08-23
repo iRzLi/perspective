@@ -1,4 +1,5 @@
 import React from 'react';
+import Buffer from '../buffer/buffer';
 
 class Splash extends React.Component{
     constructor(props){
@@ -49,7 +50,9 @@ class Splash extends React.Component{
 
     render(){
         let questionsElements = null;
+        // if questions are loaded
         if (this.state.fetched){
+            // Builds question and choices html
             questionsElements = Object.values(this.props.questions).map((currEle, index)=>{
                 let curr_res = this.state.responses[currEle.id];
                 return (
@@ -70,14 +73,14 @@ class Splash extends React.Component{
                         </div>
                     </div>
                 )
-
             })
         }
+        
 
         // Asking if questions are loaded in to the store yet
         if(this.state.fetched===false){
             return (
-                <div>Fetching</div>
+                <Buffer />
             )
         }else {
             let errMsg = null;

@@ -47,30 +47,48 @@ const Results = (props) => {
             if (chart === null) {
                 chart = [];
             }
+
+            // If the accum value is <= 0 they are in the default direction
             if (element.value <= 0) {
                 type += element.meaning[0];
+                // If type === E AND
+                // If element.meaning[0] (E) === left (I)
+                // LEFT SIDE FILL
                 if (element.meaning[0] === element.left) {
                     chart.push(<div className="perspective-chart-row" key={element.default}>
                         <div>{element.default} </div>
                         <div>{leftSide}</div>
                         <div>{element.other}</div>
                     </div>)
-                } else {
+                }
+                // If type === E AND
+                // If element.meaning[0] (E) !== left (I)
+                // RIGHT SIDE FILL
+                else {
                     chart.push(<div className="perspective-chart-row" key={element.default}>
                         <div>{element.other}</div>  
                         <div>{rightSide}</div>  
                         <div>{element.default} </div>
                     </div>)
                 }
-            } else {
+            } 
+            // If the accum value is > 0 they are in the other direction
+            else {
                 type += element.meaning[1];
+                // If type === I AND
+                // If element.meaning[0] (E) === left (I)
+                // RIGHT SIDE FILL
                 if (element.meaning[0] === element.left) {
                     chart.push(<div className="perspective-chart-row" key={element.default}>
                         <div>{element.default} </div> 
                         <div>{rightSide}</div>  
                         <div>{element.other}</div> 
                     </div>)
-                } else {
+                } 
+                // If type === I AND
+                // If element.meaning[0] (E) !== left (I)
+                // LEFT SIDE FILL
+                else {
                     chart.push(<div className="perspective-chart-row" key={element.default}>
                         <div>{element.other}</div>  
                         <div>{leftSide}</div>  
