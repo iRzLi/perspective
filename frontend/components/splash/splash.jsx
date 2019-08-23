@@ -1,5 +1,4 @@
 import React from 'react';
-import Buffer from '../buffer/buffer';
 
 class Splash extends React.Component{
     constructor(props){
@@ -80,7 +79,7 @@ class Splash extends React.Component{
         // Asking if questions are loaded in to the store yet
         if(this.state.fetched===false){
             return (
-                <Buffer />
+                null
             )
         }else {
             let errMsg = null;
